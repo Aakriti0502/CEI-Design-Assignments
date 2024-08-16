@@ -1,4 +1,4 @@
-#  ques1
+#  Ques1
 print("Hello, World!")
 
 # Ques2 
