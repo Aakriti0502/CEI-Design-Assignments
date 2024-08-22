@@ -1,13 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # Question 1
-
-# In[ ]:
-
-
+ # Question 1
 import numpy as np
-my_list = [1,2,3,4,5]
+my_list = [5,10,25,30,55]
 arr=np.array(my_list) #converting a list to array using np.array
 print(arr)
 new_numbr = 100
@@ -15,13 +8,8 @@ new_arr = np.append(arr,new_numbr)
 print("Array after adding numbers:", new_arr)
 
 
-# # Question2
-# 
-
-# In[4]:
-
-
-my_list = [1,2,3,4,5,6]
+#Question2
+my_list = [0,1,2,3,4,5]
 arr=np.array(my_list) 
 num_elements = int(input("How many elements do you want to add? "))
 for _ in range(num_elements):
@@ -30,13 +18,7 @@ for _ in range(num_elements):
 print("Final array:", arr)
 
 
-# # Question3
-# 
-
-# In[7]:
-
-
-
+#Question3
 import json
 
 json_data = '''
@@ -52,26 +34,16 @@ json_data = '''
 '''
 
 data = json.loads(json_data)
-
 explanation = data.get("explanation", "No explanation available")
 title = data.get("title", "No title available")
-
 print("Explanation:", explanation)
 print("Title:", title)
 
 
-# # Question4
-
-# In[8]:
-
-
-
+#Question4
 import requests
-
 url = "http://api.open-notify.org/iss-now.json"
-
 response = requests.get(url)
-
 if response.status_code == 200:
     data = response.json()
     print(json.dumps(data, indent=4))
@@ -79,17 +51,10 @@ else:
     print(f"Failed to retrieve data. Status code: {response.status_code}")
 
 
-# # Question5
-
-# In[9]:
-
-
-
+#Question5
 import requests
-
 url = "http://api.open-notify.org/iss-now.json"
 response = requests.get(url)
-
 if response.status_code == 200:
     data = response.json()
     
@@ -106,20 +71,13 @@ else:
     print(f"Failed to retrieve data. Status code: {response.status_code}")
 
 
-# # Question6 
-
-# In[ ]:
-
-
-
+#Question6 
 import requests
 import pandas as pd
 import time
 
 url = "http://api.open-notify.org/iss-now.json"
-
 num_records = 100
-
 timestamps = []
 latitudes = []
 longitudes = []
@@ -155,7 +113,7 @@ df.to_csv("iss_location_data.csv", index=False)
 print("Data has been written to iss_location_data.csv")
 
 
-# In[ ]:
+
 
 
 
