@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.read_csv('your_file.csv')
+
+# Remove rows with "N/A" values
+df_cleaned = df.dropna()
+
+# Save the cleaned DataFrame to a new CSV file
+df_cleaned.to_csv('cleaned_file.csv', index=False)
+
+print("Rows containing 'N/A' values have been removed and saved to 'cleaned_file.csv'.")
